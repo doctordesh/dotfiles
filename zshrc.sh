@@ -78,6 +78,8 @@ function colors() {
 	done
 	echo;
     done
+
+    echo -e "               black  red  green yello blue  magen cyan  white";
     echo;
 }
 
