@@ -46,6 +46,7 @@ alias pwdc="pwd | tr -d '\n' | pbcopy"
 alias tmp="cd ~/tmp"
 alias backup="sh ~/bin/backup.sh"
 alias eq="sudo pkill -u _coreaudiod"
+alias order="python ~/Development/zoomlist/main.py | pbcopy"
 
 # loop 'command' <sleep-time in seconds>
 function loop() {
