@@ -121,3 +121,4 @@ prompt pure
 
 # Activate basic conda
 conda activate python36
+export PATH="/usr/local/opt/ansible@2.9/bin:$PATH"
