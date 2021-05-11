@@ -10,13 +10,13 @@ export PS1="%n@%m : %~ => "
 
 autoload -U colors && colors
 if [[ $(hostname -s) = w* ]]; then
-    PROMPT="%{$fg[green]%}%n%{$fg[red]%}@%{$fg[white]%}%m %{$fg[blue]%}%~%{$reset_color%}"$'\n'"%{$fg[magenta]%}>%{$reset_color%} "
+    PROMPT="%{$fg[green]%}%n%{$fg[red]%}@%{$fg[white]%}%m %{$fg[red]%}| %{$fg[blue]%}%~%{$reset_color%}"$'\n'"%{$fg[magenta]%}>%{$reset_color%} "
     # PROMPT="%{$fg[white]%}%n%{$reset_color%}@%{$bg[white]$fg[black]%}%m%{$reset_color%} %{$fg[yellow]%}%~ %{$reset_color%}%{$fg[white]%}█%{$reset_color%} > "
 elif [[ $(hostname -s) = b* ]]; then
-    PROMPT="%{$fg[green]%}%n%{$fg[red]%}@%{$fg[blue]%}%m %{$fg[blue]%}%~%{$reset_color%}"$'\n'"%{$fg[magenta]%}>%{$reset_color%} "
+    PROMPT="%{$fg[green]%}%n%{$fg[red]%}@%{$fg[blue]%}%m %{$fg[red]%}| %{$fg[blue]%}%~%{$reset_color%}"$'\n'"%{$fg[magenta]%}>%{$reset_color%} "
 #  PS1="%{$fg[white]%}%n%{$reset_color%}@%{$bg[blue]%}%m%{$reset_color%} %{$fg[yellow]%}%~ %{$reset_color%}> "
 elif [[ $(hostname -s) = g* ]]; then
-    PROMPT="%{$fg[green]%}%n%{$fg[red]%}@%{$fg[green]%}%m %{$fg[blue]%}%~%{$reset_color%}"$'\n'"%{$fg[magenta]%}>%{$reset_color%} "
+    PROMPT="%{$fg[green]%}%n%{$fg[red]%}@%{$fg[green]%}%m %{$fg[red]%}| %{$fg[blue]%}%~%{$reset_color%}"$'\n'"%{$fg[magenta]%}>%{$reset_color%} "
  #   PS1="%{$fg[white]%}%n%{$reset_color%}@%{$bg[green]%}%m%{$reset_color%} %{$fg[yellow]%}%~ %{$reset_color%}> "
 fi
 #colors
