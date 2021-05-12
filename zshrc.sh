@@ -45,7 +45,7 @@ alias dev="cd ~/Development"
 alias pwdc="pwd | tr -d '\n' | pbcopy"
 alias tmp="cd ~/tmp"
 alias backup="sh ~/bin/backup.sh"
-alias eq="ps aux | grep _coreaudiod"
+alias eq="ps aux | grep /usr/sbin/coreaudiod"
 alias order="python ~/Development/zoomlist/main.py | pbcopy"
 alias gitclean="git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d"
 
