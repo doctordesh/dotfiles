@@ -23,6 +23,7 @@ fi
 #HISTFILE=~/.zsh_history
 
 export PATH=~/bin:$PATH
+export PATH=~/.local/bin:$PATH
 export PATH=$PATH:/usr/local/go/bin
 alias l="ls -lah"
 alias goenv="export PATH=$PATH:/usr/local/go/bin"
