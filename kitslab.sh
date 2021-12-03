@@ -23,8 +23,13 @@ fi
 #HISTFILE=~/.zsh_history
 
 export PATH=~/bin:$PATH
+# For executables installed with pip install --user
 export PATH=~/.local/bin:$PATH
+# For executables installed with go install
+export PATH=~/go/bin:$PATH
+# For go tool
 export PATH=$PATH:/usr/local/go/bin
+
 alias l="ls -lah"
 alias goenv="export PATH=$PATH:/usr/local/go/bin"
 alias em="emacs -nw @$"
