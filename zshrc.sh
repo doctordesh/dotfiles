@@ -32,6 +32,7 @@ export PATH=$PATH:~/.local/bin
 export PATH="./:$PATH"
 export PYTHONPATH=~/Library/Python/3.7/lib/python/site-packages:$(pythonpath ~/Development)
 export GITLAB_API_TOKEN=pT87wDVujnQs9UprBA7X
+export ANSIBLE_VAULT_PASSWORD_FILE=~/Development/vault_password_file
 
 # Get rid of warnings
 export LC_ALL=en_US.UTF-8
