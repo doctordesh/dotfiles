@@ -40,6 +40,10 @@ function sardenv() {
     conda activate sardana
 }
 
+function s() {
+    spock --profile="$(hostname | sed -E 's/b(-v)?-([^-]*)-.*/\2ct/')"
+}
+
 function colors() {
     text="xYz"; # Some test text
 
