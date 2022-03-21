@@ -50,11 +50,16 @@ alias dev="cd ~/Development"
 alias pwdc="pwd | tr -d '\n' | pbcopy"
 alias tmp="cd ~/tmp"
 alias backup="sh ~/bin/backup.sh"
-alias eq="ps aux | grep eqMac"
 alias order="python ~/Development/zoomlist/main.py | pbcopy"
 alias gitclean="git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d"
 alias x11="xhost + ${HOSTNAME}"
 alias org="/Applications/EmacsOrg.app/Contents/MacOS/Emacs &"
+
+function eq() {
+    PID=`ps -ef | grep 'eqMac.app' | awk \{'print$2'\} | head -n 1`
+    echo "Killing eqMac.app with PID: $PID"
+    sudo kill -9 $PID
+}
 
 # loop 'command' <sleep-time in seconds>
 function loop() {
