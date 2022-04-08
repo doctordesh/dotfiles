@@ -54,6 +54,7 @@ alias order="python ~/Development/zoomlist/main.py | pbcopy"
 alias gitclean="git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d"
 alias x11="xhost + ${HOSTNAME}"
 alias org="/Applications/EmacsOrg.app/Contents/MacOS/Emacs &"
+alias dockertangodevice="docker exec -it -e DISPLAY=`hostname`:0 device /bin/bash"
 
 function eq() {
     PID=`ps -ef | grep 'eqMac.app' | awk \{'print$2'\} | head -n 1`
