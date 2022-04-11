@@ -55,6 +55,7 @@ alias gitclean="git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git b
 alias x11="xhost + ${HOSTNAME}"
 alias org="/Applications/EmacsOrg.app/Contents/MacOS/Emacs &"
 alias dockertangodevice="docker exec -it -e DISPLAY=`hostname`:0 device /bin/bash"
+alias foodtruck="curl -s http://w-v-kitslab-web-0.maxiv.lu.se:1810/foodtruck/today | python3 -m json.tool"
 
 function eq() {
     PID=`ps -ef | grep 'eqMac.app' | awk \{'print$2'\} | head -n 1`
