@@ -24,7 +24,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # exports
 export GO111MODULE=on
 export GOPRIVATE=gitlab.maxiv.lu.se
-export EDITOR=ec
+export EDITOR=emacs
 export PATH=$PATH:$HOME/go/bin
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export PATH=$PATH:~/bin
@@ -39,7 +39,6 @@ export LC_ALL=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-alias emacs=ec
 alias resource="source ~/.zshrc"
 alias profile="ec ~/.zshrc"
 alias sshconfig="ec ~/.ssh/config"
