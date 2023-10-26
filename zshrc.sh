@@ -56,6 +56,7 @@ alias dockertangodevice="docker exec -it -e DISPLAY=`hostname`:0 device /bin/bas
 alias foodtruck="curl -s http://w-v-kitslab-web-0.maxiv.lu.se:1810/foodtruck/today | python3 -m json.tool"
 alias taiga="docker kill taiga-is-awful; docker start taiga-is-awful"
 alias ca="conda activate"
+alias venv="source ./.venv/bin/activate"
 
 function eq() {
     PID=`ps -ef | grep 'eqMac.app' | awk \{'print$2'\} | head -n 1`
