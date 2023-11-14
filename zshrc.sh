@@ -135,5 +135,5 @@ zstyle ':prompt:pure:execution_time' color '#F9A843'
 prompt pure
 
 # Activate basic conda
-conda activate python36
+conda activate py311
 export PATH="/usr/local/opt/ansible@2.9/bin:$PATH"
