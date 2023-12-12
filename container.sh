@@ -1,4 +1,4 @@
-export PS1='\[\e[34m\]($CONDA_DEFAULT_ENV) \[\e[0m\][\[\e[31m\]\u\[\e[32m\]@\[\e[31m\]\H\[\e[0m\]] \w\n> '
+export PS1='[\[\e[31m\]\u\[\e[32m\]@\[\e[31m\]\H\[\e[0m\]] \w\n> '
 
 alias l="ls -lah"
 alias ll="ls -lah"
