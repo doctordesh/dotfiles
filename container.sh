@@ -4,6 +4,9 @@ alias l="ls -lah"
 alias ll="ls -lah"
 alias resource="source /root/.bashrc"
 
+export PATH=~/go/bin:$PATH
+export PATH=~/.local/bin:$PATH
+
 conda activate tangodev
 
 function colors() {
