@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/emil/.oh-my-zsh"
+export ZSH="/Users/emiros/.oh-my-zsh"
 
 # Disable theme, use 'pure'
 ZSH_THEME=""
@@ -18,14 +18,11 @@ export HOSTNAME=`hostname`
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
-# ssh
-export SSH_KEY_PATH="~/.ssh/rsa_id"
-
 # exports
 export GO111MODULE=on
 export GOPRIVATE=gitlab.maxiv.lu.se
 export EDITOR=emacs
-export PATH=$PATH:$HOME/go/bin
+export PATH=$PATH:$HOME/Development/go/bin
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export PATH=$PATH:~/bin
 export PATH=$PATH:~/.local/bin
@@ -33,6 +30,7 @@ export PATH="./:$PATH"
 export GITLAB_API_TOKEN=pT87wDVujnQs9UprBA7X
 export ANSIBLE_VAULT_PASSWORD_FILE=~/Development/vault_password_file
 export TANGO_HOST=localhost:10000
+export _JAVA_OPTIONS='-Dsun.java2d.xrender=false'
 
 # Get rid of warnings
 export LC_ALL=en_US.UTF-8
@@ -43,7 +41,6 @@ alias resource="source ~/.zshrc"
 alias profile="ec ~/.zshrc"
 alias sshconfig="ec ~/.ssh/config"
 alias sshhosts="ec ~/.ssh/known_hosts"
-alias ws="cd ~/Development/workspaces"
 alias ks="ksync"
 alias dev="cd ~/Development"
 alias pwdc="pwd | tr -d '\n' | pbcopy"
@@ -51,10 +48,8 @@ alias tmp="cd ~/tmp"
 alias order="python ~/Development/zoomlist/main.py | pbcopy"
 alias gitclean="git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d"
 alias x11="xhost + ${HOSTNAME}"
-alias org="/Applications/EmacsOrg.app/Contents/MacOS/Emacs &"
 alias dockertangodevice="docker exec -it -e DISPLAY=`hostname`:0 device /bin/bash"
 alias foodtruck="curl -s http://w-v-kitslab-web-0.maxiv.lu.se:1810/foodtruck/today | python3 -m json.tool"
-alias taiga="docker kill taiga-is-awful; docker start taiga-is-awful"
 alias ca="conda activate"
 alias venv="source ./.venv/bin/activate"
 
@@ -101,14 +96,14 @@ function colors() {
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/emil/Development/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/emiros/Development/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/emil/Development/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/emil/Development/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/emiros/Development/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/emiros/Development/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/emil/Development/miniconda3/bin:$PATH"
+        export PATH="/Users/emiros/Development/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -117,15 +112,16 @@ unset __conda_setup
 export PATH="/usr/local/sbin:$PATH"
 
 # Setup 'pure'
-fpath+=$HOME/Development/dotfiles/pure
+# fpath+=$HOME/Development/personal/dotfiles/pure
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
 
 autoload -U promptinit; promptinit
 
 PURE_CMD_MAX_EXEC_TIME=2
 
-zstyle ':prompt:pure:path' color '#6096D2'
-zstyle ':prompt:pure:prompt:success' color '#B366BB'
-zstyle ':prompt:pure:prompt:error' color '#C94D1C'
+zstyle :prompt:pure:path color '#6096D2'
+zstyle :prompt:pure:prompt:success color '#B366BB'
+zstyle :prompt:pure:prompt:error color '#C94D1C'
 zstyle ':prompt:pure:prompt:continuation' color '#B366BB'
 zstyle ':prompt:pure:virtualenv' color '#777777'
 zstyle ':prompt:pure:git:*' color '#2B896A'
@@ -135,5 +131,5 @@ zstyle ':prompt:pure:execution_time' color '#F9A843'
 prompt pure
 
 # Activate basic conda
-conda activate py311
-export PATH="/usr/local/opt/ansible@2.9/bin:$PATH"
+# conda activate py311
+# export PATH="/usr/local/opt/ansible@2.9/bin:$PATH"
