@@ -1,6 +1,9 @@
 TMP=`mktemp -t kitslab.sh.XXXXXX`
 trap "rm $TMP* 2>/dev/null" 0
 
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
+
 # Created by newuser for 5.0.2
 # alias py="python3"
 # alias python="python3"
@@ -29,6 +32,8 @@ export PATH=~/.local/bin:$PATH
 export PATH=~/go/bin:$PATH
 # For go tool
 export PATH=$PATH:/usr/local/go/bin
+# Something with XQuartz
+export _JAVA_OPTIONS=-Dsun.java2d.xrender=false
 
 alias l="ls -lah"
 alias goenv="export PATH=$PATH:/usr/local/go/bin"

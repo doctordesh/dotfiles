@@ -1,6 +1,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/emiros/.oh-my-zsh"
 
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
+
 # Disable theme, use 'pure'
 ZSH_THEME=""
 
@@ -28,7 +31,6 @@ export PATH=$PATH:~/bin
 export PATH=$PATH:~/.local/bin
 export PATH="./:$PATH"
 export GITLAB_API_TOKEN=pT87wDVujnQs9UprBA7X
-export ANSIBLE_VAULT_PASSWORD_FILE=~/Development/vault_password_file
 export TANGO_HOST=localhost:10000
 export _JAVA_OPTIONS='-Dsun.java2d.xrender=false'
 
