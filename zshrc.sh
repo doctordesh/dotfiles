@@ -76,6 +76,10 @@ function gocover() {
     rm coverage.out;
 }
 
+function count() {
+    find . -name "*.$1" | xargs wc -l
+}
+
 function colors() {
     text="xYz"; # Some test text
 
