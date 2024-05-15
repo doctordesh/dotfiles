@@ -70,6 +70,17 @@ function loop() {
   done
 }
 
+function tloop() {
+    for i in $(seq 1 1 $2)
+    do
+	eval $1
+    done
+    # for VARIABLE in {1...$2}
+    # do
+    # 	eval $1
+    # done
+}
+
 function gocover() {
     go test -coverprofile=coverage.out ./...;
     go tool cover -html=coverage.out;
