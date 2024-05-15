@@ -75,10 +75,6 @@ function tloop() {
     do
 	eval $1
     done
-    # for VARIABLE in {1...$2}
-    # do
-    # 	eval $1
-    # done
 }
 
 function gocover() {
