@@ -53,8 +53,8 @@ alias x11="xhost + ${HOSTNAME}"
 alias dockertangodevice="docker exec -it -e DISPLAY=`hostname`:0 device /bin/bash"
 alias foodtruck="curl -s http://w-v-kitslab-web-0.maxiv.lu.se:1810/foodtruck/today | python3 -m json.tool"
 alias ca="conda activate"
-alias cvenv="python -m venv .venv; venv"
 alias venv="source ./.venv/bin/activate"
+alias cvenv="python -m venv .venv; venv"
 
 function eq() {
     PID=`ps -ef | grep 'eqMac.app' | awk \{'print$2'\} | head -n 1`
