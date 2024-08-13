@@ -55,6 +55,8 @@ alias foodtruck="curl -s http://w-v-kitslab-web-0.maxiv.lu.se:1810/foodtruck/tod
 alias ca="conda activate"
 alias venv="source ./.venv/bin/activate"
 alias cvenv="python -m venv .venv; venv"
+alias ls="eza" # brew install eza
+alias cat="bat" # brew install bat
 
 function eq() {
     PID=`ps -ef | grep 'eqMac.app' | awk \{'print$2'\} | head -n 1`
