@@ -47,16 +47,13 @@ alias ks="ksync"
 alias dev="cd ~/Development"
 alias pwdc="pwd | tr -d '\n' | pbcopy"
 alias tmp="cd ~/tmp"
-alias order="python ~/Development/zoomlist/main.py | pbcopy"
-alias gitclean="git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d"
 alias x11="xhost + ${HOSTNAME}"
-alias dockertangodevice="docker exec -it -e DISPLAY=`hostname`:0 device /bin/bash"
-alias foodtruck="curl -s http://w-v-kitslab-web-0.maxiv.lu.se:1810/foodtruck/today | python3 -m json.tool"
 alias ca="conda activate"
 alias venv="source ./.venv/bin/activate"
 alias cvenv="python -m venv .venv; venv"
 alias ls="eza" # brew install eza
 alias cat="bat" # brew install bat
+alias j="just"
 
 function eq() {
     PID=`ps -ef | grep 'eqMac.app' | awk \{'print$2'\} | head -n 1`
