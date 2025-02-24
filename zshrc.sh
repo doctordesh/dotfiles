@@ -59,6 +59,12 @@ function eq() {
     PID=`ps -ef | grep 'eqMac.app' | awk \{'print$2'\} | head -n 1`
     echo "Killing eqMac.app with PID: $PID"
     sudo kill -9 $PID
+    PID=`ps -ef | grep 'eqMac.driver' | awk \{'print$2'\} | head -n 1`
+    echo "Killing eqMac.driver with PID: $PID"
+    sudo kill -9 $PID
+    PID=`ps -ef | grep 'eqmac.helper' | awk \{'print$2'\} | head -n 1`
+    echo "Killing eqmac.helper with PID: $PID"
+    sudo kill -9 $PID
 }
 
 # loop 'command' <sleep-time in seconds>
