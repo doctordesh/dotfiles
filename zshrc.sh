@@ -27,15 +27,7 @@ export LANG=en_US.UTF-8
 # exports
 export EDITOR=emacs
 export PATH=$PATH:~/bin
-export PATH="./:$PATH"
-
-# export PATH=$PATH:$HOME/Development/go/bin
-# export PATH=$PATH:/usr/local/opt/go/libexec/bin
-
-# Get rid of warnings
-# export LC_ALL=en_US.UTF-8
-# export LC_CTYPE=en_US.UTF-8
-# export LANG=en_US.UTF-8
+export PATH=$PATH:$HOME/Development/go/bin
 
 alias resource="source ~/.zshrc"
 alias ks="ksync"
