@@ -29,6 +29,7 @@ export EDITOR=emacs
 export PATH=$PATH:~/bin
 export PATH=$PATH:$HOME/Development/go/bin
 export TERM=xterm
+export GOPATH=$HOME/Development/go
 
 alias resource="source ~/.zshrc"
 alias ks="ksync"
