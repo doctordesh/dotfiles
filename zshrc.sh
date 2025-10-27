@@ -30,6 +30,7 @@ export PATH=$PATH:~/bin
 export PATH=$PATH:$HOME/Development/go/bin
 export TERM=xterm
 export GOPATH=$HOME/Development/go
+export GOPRIVATE=git.eiscat.se
 
 alias resource="source ~/.zshrc"
 alias ks="ksync"
