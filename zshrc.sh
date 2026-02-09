@@ -44,7 +44,7 @@ alias ls="eza" # brew install eza
 alias cat="bat" # brew install bat
 alias j="just"
 
-function gocover() {
+function goc() {
     go test --coverprofile=coverage.out ./...;
     go tool cover -html=coverage.out;
     rm coverage.out;
