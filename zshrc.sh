@@ -35,7 +35,6 @@ export GOPRIVATE=git.eiscat.se
 alias resource="source ~/.zshrc"
 alias ks="ksync"
 alias dev="cd ~/Development"
-alias etd="cd ~/Development/EISCAT/e3d"
 alias pwdc="pwd | tr -d '\n' | pbcopy"
 alias tmp="cd ~/tmp"
 alias venv="source ./.venv/bin/activate"
@@ -43,6 +42,8 @@ alias cvenv="python -m venv .venv; venv"
 alias ls="eza" # brew install eza
 alias cat="bat" # brew install bat
 alias j="just"
+
+alias core="cd ~/Development/EISCAT/e3d/core/"
 
 function goc() {
     go test --coverprofile=coverage.out ./...;
