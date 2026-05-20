@@ -42,7 +42,6 @@ alias cvenv="python -m venv .venv; venv"
 alias ls="eza" # brew install eza
 alias cat="bat" # brew install bat
 alias j="just"
-alias cloc="find . -name '*.$1' | xargs wc -l"
 
 alias core="cd ~/Development/EISCAT/e3d/core/"
 
@@ -90,6 +89,10 @@ function colors() {
 
     echo -e "               black  red  green yello blue  magen cyan  white";
     echo;
+}
+
+function cloc() {
+    find . -name '*.$1' | xargs wc -l
 }
 
 # Setup 'pure'
