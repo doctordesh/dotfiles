@@ -28,7 +28,7 @@ export LANG=en_US.UTF-8
 export EDITOR=emacs
 export PATH=$PATH:~/bin
 export PATH=$PATH:$HOME/Development/go/bin
-export TERM=xterm
+export TERM=xterm-256color
 export GOPATH=$HOME/Development/go
 export GOPRIVATE=git.eiscat.se
 
